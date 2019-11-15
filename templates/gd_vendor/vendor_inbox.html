@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Inbox</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_vendor/vendor_menu.html' %}
+<br><br>
+{% if object_list %}
+    <table align="center" border="2">
+    <tr bgcolor="orange">
+        <th width="100">From</th>
+        <th width="100">Subject</th>
+        <th width="100">Body</th>
+        <th width="100">Delete</th>
+    </tr>
+    {% for x in object_list %}
+    <tr bgcolor="#1e90ff">
+        <th width="200">{{ x.frm }}</th>
+        <th width="150">{{ x.subject }}</th>
+        <th width="200">{{ x.body }}</th>
+        <th width="100">
+            <form action="{% url 'vendor_delete_mail' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="{{ x.mail_id }}" name="mail_id">
+            <button type="submit" class="btn btn-danger">Yes</button>
+            </form>
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+     <center><font size="5" color="red" face="Arial Black">Sorry.. No Mails are Available</font> </center>
+{% endif %}
+
+
+<br><br>
+<center>
+        <form action="{% url 'vendor_mail_menu' %}">
+              <button type="submit" class="btn btn-warning">Back</button>
+          </form>
+</center>
+
+</body>
+</html>

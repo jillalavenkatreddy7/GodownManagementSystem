@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Home</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_vendor/vendor_menu.html' %}
+<br><br>
+<table align="center" >
+    <tr><th><center><font color="#daa520" face="Arial" size="6">Welcome</font></center></th>
+    <tr><th><center><font color="#daa520" face="Arial" size="6">{{ request.session.username }}</font></center></th>
+    <tr><th><center><font color="#daa520" face="Arial" size="6">To</font></center></th>
+    <tr><th><center><font color="#daa520" face="Arial" size="6">GoDown Management</font></center></th>
+    </tr>
+</table>
+</body>
+</html>

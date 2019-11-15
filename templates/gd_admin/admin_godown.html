@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin_GoDown</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br>
+
+<table align="center">
+    <tr>
+        <th>
+            <form action="{% url 'admin_add_godown' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="5" color="#8b008b" face="Arial ">
+               New GoDown<br><br>
+            </font></center>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial"> Godown Id :</font></th>
+        <th><input type="number" required name="godown_id"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Location :</font></th>
+        <th><input type="text" required name="location"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Capacity :</font></th>
+        <th><input type="text" required name="capacity"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">GoDown Manager :</font></th>
+        <th><select name="godown_manager">
+                <option>--Select--</option>
+            {% for x in gd_manager_name %}
+                <option>{{ x.name }}</option>
+            {% endfor %}
+        </select></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Inventory Manager :</font></th>
+        <th><select name="inventory_manager">
+                <option>--Select--</option>
+            {% for x in inventory_name %}
+                <option>{{ x.name }}</option>
+            {% endfor %}
+        </select></th>
+    </tr>
+    <tr>
+        <th colspan="2"><br>
+            <center><button type="submit" class="btn btn-success">Add</button></center>
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <center><font size="5" color="green" face="Arial">{{ message }}</font> </center>
+            <center><font size="5" color="red" face="Arial">{{ msg }}</font> </center>
+        </th>
+    </tr>
+</table>
+
+</form>
+        </th>
+    <th width="30"></th>
+        {% if godown_data %}
+        <th>
+            <table align="center" border="2">
+                <tr bgcolor="#d2691e">
+                    <th width="50">Id</th>
+                    <th width="80">Location</th>
+                    <th width="50">Capacity</th>
+                    <th width="150">GoDown Manager</th>
+                    <th width="150">Inventory Manager</th>
+                    <th width="80">Update</th>
+                    <th width="80">Delete</th>
+                </tr>
+                {% for x in godown_data %}
+                    <tr bgcolor="#1e90ff">
+                    <th width="50">{{ x.godown_id }}</th>
+                    <th width="80">{{ x.location }}</th>
+                    <th width="50">{{ x.capacity }}</th>
+                    <th width="150">{{ x.godown_manager }}</th>
+                    <th width="150">{{ x.inventory_manager }}</th>
+                    <th width="80">
+                        <form action="{% url 'update_godown' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ x.godown_id }}" name="godown_id">
+                            <input type="hidden" value="{{ x.location }}" name="location">
+                            <input type="hidden" value="{{ x.capacity }}" name="capacity">
+                            <input type="hidden" value="{{ x.godown_manager }}" name="godown_manager">
+                            <input type="hidden" value="{{ x.inventory_manager }}" name="inventory_manager">
+                            <center><button type="submit" class="btn btn-success">Yes</button></center>
+                        </form>
+                    </th>
+                    <th width="80">
+                        <form action="{% url 'admin_delete_godown' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ x.godown_id }}" name="godown_id">
+                            <center><button type="submit" class="btn btn-danger">Yes</button></center>
+                        </form>
+                    </th>
+                </tr>
+                {% endfor %}
+            </table>
+        </th>
+        {% endif %}
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_manager/godown_manager_menu.html' %}
+<br><br><br><br>
+<table align="center">
+
+    <tr><th><a href="{% url 'manager_inbox' %}">
+        <center><font size="5" color="#ff4500" face="Arial">Inbox</font></center>
+    </a></th></tr>
+    <tr><th><a href="{% url 'manager_compose_mail' %}">
+        <center><font size="5" color="#ff4500" face="Arial">Compose</font></center>
+    </a></th></tr>
+</table>
+</body>
+</html>

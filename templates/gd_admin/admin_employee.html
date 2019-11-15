@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin_Employee</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br>
+
+<table align="center">
+    <tr>
+        <th>
+            <form action="{% url 'admin_add_employee' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="5" color="#8b008b" face="Arial ">
+               New Employee<br>
+            </font></center>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Employe Name :</font></th>
+        <th><input type="text" required name="name"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Employee designation : </font></th>
+        <th><select name="designation" required>
+            <option>GoDown Manager</option>
+            <option>Inventory Manager</option>
+            <option>Accountant</option>
+        </select></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Address :</font></th>
+        <th><textarea name="address" required></textarea></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Email_Id :</font></th>
+        <th><input type="email" required name="email"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Contact No :</font></th>
+        <th><input type="number" required name="contact"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Username :</font></th>
+        <th><input type="text" required name="username"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c" face="Arial">Password :</font></th>
+        <th><input type="password" required name="password"></th>
+    </tr>
+    <tr>
+        <th colspan="2"><br>
+            <center><button type="submit" class="btn btn-success">Add</button></center>
+        </th>
+    </tr>
+    <tr>
+        <th colspan="2">
+            <center><font size="5" color="green" face="Arial">{{ message }}</font> </center>
+        </th>
+    </tr>
+</table>
+
+</form>
+        </th>
+    <th width="30"></th>
+        {% if employee_data %}
+        <th>
+            <table align="center" border="2">
+                <tr bgcolor="#d2691e">
+                    <th width="100"><center>Name</center></th>
+                    <th width="200"><center>designation</center></th>
+                    <th width="80">View</th>
+                    <th width="80">Update</th>
+                    <th width="80">Delete</th>
+                </tr>
+                {% for x in employee_data %}
+                    <tr bgcolor="#1e90ff">
+                    <th width="100">{{ x.name }}</th>
+                    <th width="80">{{ x.designation }}</th>
+                    <th width="80">
+                        <form action="{% url 'admin_view_employee' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ x.username }}" name="username">
+                            <center><button type="submit" class="btn btn-warning">Yes</button></center>
+                        </form>
+                    </th>
+                    <th width="80">
+                        <form action="{% url 'update_employee' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ x.name }}" name="name">
+                            <input type="hidden" value="{{ x.designation }}" name="designation">
+                            <input type="hidden" value="{{ x.address }}" name="address">
+                            <input type="hidden" value="{{ x.email }}" name="email">
+                            <input type="hidden" value="{{ x.contact }}" name="contact">
+                            <input type="hidden" value="{{ x.username }}" name="username">
+                            <input type="hidden" value="{{ x.password }}" name="password">
+                            <center><button type="submit" class="btn btn-success">Yes</button></center>
+                        </form>
+                    </th>
+                    <th width="80">
+                        <form action="{% url 'admin_delete_employee' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ x.username }}" name="username">
+                            <center><button type="submit" class="btn btn-danger">Yes</button></center>
+                        </form>
+                    </th>
+                </tr>
+                {% endfor %}
+            </table>
+        </th>
+        {% endif %}
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>

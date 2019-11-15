@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+{% load staticfiles %}
+</head><br>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_home/menu.html' %}
+<br><br><br>
+<table align="center" >
+    <tr>
+        <th width="100"></th>
+        <th width="450">
+            <font size="4" color="orange" face="Arial Black">
+        GoDown management is the supervision of non-capitalized assets (inventory) and stock items. A component of supply chain management, inventory management supervises the flow of goods from manufacturers to warehouses and from these facilities to point of sale.
+            </font>
+        </th>
+        <th>
+            <img src="{% static 'images/aboutus.jpg' %}" width="250" height="180">
+        </th>
+    </tr>
+</table>
+<br><br><br><br><br><br>
+{#{% include 'gd_home/footer.html' %}#}
+
+</body>
+</html>

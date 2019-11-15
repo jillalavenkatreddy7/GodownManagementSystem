@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+<body>
+<table align="center" width="500">
+    <tr>
+      <th>
+          <form action="{% url 'godown_manager_home' %}">
+              <button type="submit" class="btn btn-primary">Home</button>
+          </form>
+      </th>
+      <th>
+          <form action="{% url 'manager_email_menu' %}">
+              <button type="submit" class="btn btn-secondary">Email</button>
+          </form>
+      </th>
+      <th>
+          <form action="{% url 'manager_view_profile' %}">
+              <button type="submit" class="btn btn-success">View Profile</button>
+          </form>
+      </th>
+      <th>
+          <form action="{% url 'manager_reports_menu' %}">
+              <button type="submit" class="btn btn-danger">Reports</button>
+          </form>
+      </th>
+      <th scope="col">
+          <form action="{% url 'manager_logout' %}">
+          <button type="submit" class="btn btn-warning">LogOut</button>
+          </form>
+      </th>
+    </tr>
+</table>
+
+
+
+  </body>
+</html>

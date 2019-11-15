@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+{% load staticfiles %}
+</head><br>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_home/menu.html' %}
+<br><br>
+<table align="center">
+    <tr>
+        <th>
+            <form action="/gd_login/login_check/" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="6" color="#ff4500" face="Arial ">
+                <img src="{% static 'images/login.jpg' %}" height="80" width="300"><br><br>
+            </font></center>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" face="Arial" color="olive">Username : </font> </th>
+        <th><input type="text" required name="username"></th>
+    </tr>
+    <tr>
+        <th><font size="4" face="Arial" color="olive">Password : </font></th>
+        <th><input type="password" required name="password"></th>
+    </tr>
+    <tr>
+        <th><font size="4" face="Arial" color="olive">Type : </font></th>
+        <th><select name="usertype">
+            <option>Administrator</option>
+            <option>GoDown Manager</option>
+            <option>Vendor</option>
+            <option>Inventory Manager</option>
+            <option>Accountant</option>
+        </select> </th>
+    </tr>
+    <tr>
+        <th colspan="2"><br>
+            <center><button type="submit" class="btn btn-success">Login</button></center>
+        </th>
+    </tr>
+</table><br>
+            {% for message in messages %}
+               <center>
+                   <font size="5" color="red" face="Arial Black">
+                        {{ message }}
+                    </font>
+               </center>
+            {% endfor %}
+</form>
+        </th>
+        <th width="50"></th>
+        <th>
+            <img src="{% static 'images/login key.jpg' %}" width="250" height="200">
+        </th>
+    </tr>
+</table>
+<br><br>
+{#{% include 'gd_home/footer.html' %}#}
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Reports</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_manager/godown_manager_menu.html' %}
+<br><br><br>
+{% if object_list %}
+<table align="center" border="2">
+    <tr bgcolor="#d2691e">
+        <th width="150">Product Name</th>
+        <th width="150">Product Capacity</th>
+        <th width="150">Address</th>
+        <th width="200">Customer Name</th>
+        <th width="100">Vendor Id</th>
+    </tr>
+{% for x in object_list %}
+    <tr bgcolor="#ffd700">
+        <th width="100">{{ x.product_name }}</th>
+        <th width="100">{{ x.product_capacity }}</th>
+        <th width="100">{{ x.address }}</th>
+        <th width="100">{{ x.customer_name }}</th>
+        <th width="100">{{ x.vendor_id }}</th>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+    <center><font size="5" face="Arial Black" color="red">Sorry.. No Delivers are Generated</font></center>
+{% endif %}
+<br><br>
+
+ <form action="{% url 'manager_reports_menu' %}">
+     <center><button type="submit" class="btn btn-secondary">Back</button></center>
+          </form>
+
+</body>
+</html>

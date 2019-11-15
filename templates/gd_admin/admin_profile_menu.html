@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br><br><br>
+
+<table align="center">
+    <tr>
+        <th>
+            <a href="{% url 'admin_view_profile' %}">
+            <font size="5" color="#ff4500">
+                <center>View Profile</center>
+            </font>
+            </a>
+        </th>
+    </tr>
+     <tr>
+        <th>
+             <a href="{% url 'admin_change_password' %}">
+            <font size="5" color="#ff4500">
+                <center>Change Password</center>
+            </font>
+             </a>
+        </th>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+
+
+{% for x in employee_data %}
+<table align="center">
+    <tr>
+        <th><font size="4" color="#663399">Name :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.name }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Designation :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.designation }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Address :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.address }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Email_Id :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.email }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Contact No :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.contact }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Username :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.username }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Password :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.password }}</font></th>
+    </tr>
+<tr>
+    <th colspan="2">
+         <form action="{% url 'admin_employee' %}">
+             <br>   <center><button type="submit" class="btn btn-info">Back</button></center>
+          </form>
+    </th>
+</tr>
+</table>
+{% endfor %}
+</body>
+</head>
+</html>

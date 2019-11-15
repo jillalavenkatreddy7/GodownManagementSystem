@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Reports</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+{% if object_list %}
+<table align="center" border="2">
+    <tr bgcolor="#d2691e">
+        <th width="100">Vendor_Id</th>
+        <th width="100">Vendor_Name</th>
+        <th width="100">Company_Name</th>
+        <th width="100">Company_Address</th>
+        <th width="100">Contact No</th>
+        <th width="100">Email-Id</th>
+        <th width="100">Username</th>
+    </tr>
+{% for x in object_list %}
+    <tr bgcolor="#ffd700">
+        <th width="100">{{ x.vendor_id }}</th>
+        <th width="100">{{ x.vendor_name }}</th>
+        <th width="100">{{ x.company_name }}</th>
+        <th width="100">{{ x.company_address }}</th>
+        <th width="100">{{ x.contact_no }}</th>
+        <th width="100">{{ x.email_id }}</th>
+        <th width="100">{{ x.username }}</th>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+    <center><font size="5" face="Arial Black" color="red">Sorry.. No Vendors Available</font></center>
+{% endif %}
+<br><br>
+
+ <form action="{% url 'admin_reports_menu' %}">
+     <center><button type="submit" class="btn btn-secondary">Back</button></center>
+          </form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+
+
+{% for x in vendor_data %}
+<table align="center">
+    <tr>
+        <th><font size="4" color="#663399">Vendor Id :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.vendor_id }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Vendor Name :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.vendor_name }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Comapany Name :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.company_name }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Company Address :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.company_address }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Contact No :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.contact_no }}</font></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#663399">Email-Id :</font></th>
+        <th><font size="4" color="#dc143c">{{ x.email_id }}</font></th>
+    </tr>
+<tr>
+    <th colspan="2">
+         <form action="{% url 'admin_pending_vendors' %}">
+             <br>   <center><button type="submit" class="btn btn-info">Back</button></center>
+          </form>
+    </th>
+</tr>
+</table>
+{% endfor %}
+</body>
+</head>
+</html>

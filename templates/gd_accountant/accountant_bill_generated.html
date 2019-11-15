@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Generation</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_accountant/accountant_menu.html' %}
+<br><br><br>
+
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="6" face="Arial" color="#daa520">Bill generated</font></center>
+        </th>
+    </tr>
+    <tr><th></th></tr>
+    <tr><th></th></tr>
+    <tr><th></th></tr>
+    <tr>
+        <th colspan="2">
+            <center><font size="5" face="Arial" color="#1e90ff">Press Back To Generate Another Bill</font></center>
+        </th>
+    </tr>
+
+
+    <th colspan="2">
+          <form action="{% url 'accountant_bill_generation' %}"><br>
+              <center><button type="submit" class="btn btn-danger">Back</button></center>
+          </form>
+      </th>
+</table>
+
+</body>
+</html>

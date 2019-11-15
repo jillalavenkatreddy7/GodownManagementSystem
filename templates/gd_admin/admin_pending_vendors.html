@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor reports</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+{% if object_list %}
+<table align="center" border="2">
+    <tr bgcolor="#ff1493">
+        <th width="30"> <center>Idno</center></th>
+        <th width="120"> <center>Vendor Name</center></th>
+        <th width="150"> <center>Company Name</center></th>
+        <th width="100"><center>View</center></th>
+        <th width="100"> <center>Accept</center></th>
+        <th width="100"> <center>Reject</center></th>
+    </tr>
+{% for x in object_list %}
+    <tr bgcolor="#87ceeb">
+        <th width="30">{{ x.vendor_id }}</th>
+        <th width="100">{{ x.vendor_name }}</th>
+        <th width="100">{{ x.company_name }}</th>
+        <th width="100">
+            <form action="{% url 'admin_view_pending_vendor' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="{{ x.vendor_id }}" name="vendor_id">
+                <center><button type="submit" class="btn btn-primary">Yes</button></center>
+            </form>
+        </th>
+        <th width="100">
+            <form action="{% url 'admin_accept_vendor' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="{{ x.vendor_id }}" name="vendor_id">
+                <input type="hidden" value="{{ x.vendor_name }}" name="vendor_name">
+                <input type="hidden" value="{{ x.company_name }}" name="company_name">
+                <input type="hidden" value="{{ x.company_address }}" name="company_address">
+                <input type="hidden" value="{{ x.contact_no }}" name="contact">
+                <input type="hidden" value="{{ x.email_id }}" name="email">
+                <input type="hidden" value="{{ x.username }}" name="username">
+                <input type="hidden" value="{{ x.password }}" name="password">
+                <center><button type="submit" class="btn btn-success">Yes</button></center>
+            </form>
+        </th>
+        <th width="100" height="50">
+            <form action="{% url 'admin_reject_vendor' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="{{ x.vendor_id }}" name="vendor_id">
+                <center><button type="submit" class="btn btn-danger">Yes</button></center>
+            </form>
+        </th>
+    </tr>
+{% endfor %}
+</table>
+    <br>
+    <center><font size="5" color="green" face="Arial Black"> {{ message }}</font> </center>
+{% else %}
+     <center><font size="5" color="red" face="Arial Black">Sorry.. No vendors are Registered</font> </center>
+{% endif %}
+</body>
+</html>

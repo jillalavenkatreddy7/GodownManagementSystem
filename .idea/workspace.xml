@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b5c3cd6-3edc-44bb-97b6-347345899484" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="477816462">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.70" value="1" />
+          <entry key="project.open.time.90" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gd_admin_admin" value="1" />
+          <entry key="gd_login_inbox_mails" value="1" />
+          <entry key="gd_login_login" value="2" />
+          <entry key="gd_vendor_dispatcher" value="1" />
+          <entry key="html" value="17" />
+          <entry key="jpg" value="3" />
+          <entry key="py" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="5" />
+          <entry key="HTML" value="17" />
+          <entry key="Image" value="3" />
+          <entry key="Python" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="10" />
+          <entry key="py" value="34" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="10" />
+          <entry key="Python" value="34" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/gd_home/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/gd_home/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gd_login/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gd_login/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GoDown_Management/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/gd_home/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>logi</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_inbox.html" />
+        <option value="$PROJECT_DIR$/templates/gd_accountant/accountant_inbox.html" />
+        <option value="$PROJECT_DIR$/templates/gd_manager/manager_inbox.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_inbox.html" />
+        <option value="$PROJECT_DIR$/templates/gd_inventory/inventory_inbox.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_view_pending_vendor.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/view_employee.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/update_employee.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_update_employee.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/update_godown.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_request_for_dispatcher.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_request_for_space.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_make_payments.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_space_reports.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_dispatcher_reports.html" />
+        <option value="$PROJECT_DIR$/templates/gd_accountant/accountant_bill_generation.html" />
+        <option value="$PROJECT_DIR$/gd_admin/models.py" />
+        <option value="$PROJECT_DIR$/templates/gd_home/footer.html" />
+        <option value="$PROJECT_DIR$/templates/gd_accountant/accountant_profile_management_menu.html" />
+        <option value="$PROJECT_DIR$/gd_admin/urls.py" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_profile_management_menu.html" />
+        <option value="$PROJECT_DIR$/gd_admin/views.py" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_employee.html" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_view_profile.html" />
+        <option value="$PROJECT_DIR$/templates/gd_accountant/accountant_menu.html" />
+        <option value="$PROJECT_DIR$/templates/gd_accountant/accountant_view_profile.html" />
+        <option value="$PROJECT_DIR$/gd_accountant/urls.py" />
+        <option value="$PROJECT_DIR$/gd_inventory/urls.py" />
+        <option value="$PROJECT_DIR$/gd_manager/urls.py" />
+        <option value="$PROJECT_DIR$/gd_vendor/urls.py" />
+        <option value="$PROJECT_DIR$/gd_accountant/views.py" />
+        <option value="$PROJECT_DIR$/gd_inventory/views.py" />
+        <option value="$PROJECT_DIR$/gd_manager/views.py" />
+        <option value="$PROJECT_DIR$/templates/gd_inventory/inventory_view_profile.html" />
+        <option value="$PROJECT_DIR$/templates/gd_manager/manager_view_profile.html" />
+        <option value="$PROJECT_DIR$/templates/gd_manager/godown_manager_menu.html" />
+        <option value="$PROJECT_DIR$/templates/gd_inventory/inventory_menu.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_menu.html" />
+        <option value="$PROJECT_DIR$/gd_vendor/views.py" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_view_profile.html" />
+        <option value="$PROJECT_DIR$/templates/gd_home/about_us.html" />
+        <option value="$PROJECT_DIR$/templates/gd_home/contact_us.html" />
+        <option value="$PROJECT_DIR$/templates/gd_home/login.html" />
+        <option value="$PROJECT_DIR$/templates/gd_vendor/vendor_register.html" />
+        <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/admin/sites.py" />
+        <option value="$PROJECT_DIR$/gd_admin/admin.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/gd_admin/admin_godown.html" />
+        <option value="$PROJECT_DIR$/templates/gd_home/title.html" />
+        <option value="$PROJECT_DIR$/gd_login/views.py" />
+        <option value="$PROJECT_DIR$/templates/gd_home/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GoDown_Management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoDown_Management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoDown_Management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoDown_Management" type="462c0819:PsiDirectoryNode" />
+              <item name="GoDown_Management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoDown_Management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoDown_Management" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoDown_Management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoDown_Management" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="gd_home" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite&#10;redshift" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\GoDown_Management\templates\gd_vendor" />
+      <recent name="C:\Project\GoDown_Management\templates\gd_manager" />
+      <recent name="C:\Project\GoDown_Management\templates\gd_inventory" />
+      <recent name="C:\Project\GoDown_Management\gd_login\static\images" />
+      <recent name="C:\Project\GoDown_Management\templates\gd_admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="GoDown_Management" type="Python.DjangoServer" factoryName="Django server">
+      <module name="GoDown_Management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="GoDown_Management.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b5c3cd6-3edc-44bb-97b6-347345899484" name="Default Changelist" comment="" />
+      <created>1553096880296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553096880296</updated>
+      <workItem from="1553096891669" duration="16923000" />
+      <workItem from="1553149596166" duration="12073000" />
+      <workItem from="1553173292099" duration="14692000" />
+      <workItem from="1553238873517" duration="435000" />
+      <workItem from="1553395721901" duration="1515000" />
+      <workItem from="1553536196283" duration="1850000" />
+      <workItem from="1553626469394" duration="967000" />
+      <workItem from="1553928274365" duration="2255000" />
+      <workItem from="1554020890363" duration="5611000" />
+      <workItem from="1554101491088" duration="1656000" />
+      <workItem from="1556886192941" duration="184000" />
+      <workItem from="1556888025323" duration="1467000" />
+      <workItem from="1556929969169" duration="1340000" />
+      <workItem from="1556932186004" duration="925000" />
+      <workItem from="1556933532288" duration="2496000" />
+      <workItem from="1556953326051" duration="1916000" />
+      <workItem from="1556955516238" duration="277000" />
+      <workItem from="1556955875018" duration="415000" />
+      <workItem from="1556956322349" duration="1108000" />
+      <workItem from="1556957909627" duration="440000" />
+      <workItem from="1556969115778" duration="130000" />
+      <workItem from="1556969473954" duration="345000" />
+      <workItem from="1556983241205" duration="630000" />
+      <workItem from="1556991955410" duration="425000" />
+      <workItem from="1557020963642" duration="713000" />
+      <workItem from="1557119777699" duration="655000" />
+      <workItem from="1557126949393" duration="1281000" />
+      <workItem from="1557540378796" duration="453000" />
+      <workItem from="1559042085979" duration="824000" />
+      <workItem from="1559043074206" duration="216000" />
+      <workItem from="1559792498160" duration="472000" />
+      <workItem from="1559793021679" duration="130000" />
+      <workItem from="1559795037508" duration="96000" />
+      <workItem from="1559919513384" duration="160000" />
+      <workItem from="1560356078895" duration="127000" />
+      <workItem from="1560854307946" duration="1057000" />
+      <workItem from="1560915980764" duration="696000" />
+      <workItem from="1560917486890" duration="611000" />
+      <workItem from="1561452138725" duration="414000" />
+      <workItem from="1564109875230" duration="823000" />
+      <workItem from="1564133552456" duration="36000" />
+      <workItem from="1565159083738" duration="823000" />
+      <workItem from="1565689165050" duration="419000" />
+      <workItem from="1565705499312" duration="397000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="80478000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.2934947" />
+      <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.24962178" />
+      <window_info id="DB Browser" order="3" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.33387887" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="5" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="manage.py@GoDown_Management" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.31096563" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="bottom" id="DB Execution Console" order="15" />
+      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.025718609" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49918166" visible="true" weight="0.24357034" />
+      <window_info id="Structure" order="2" sideWeight="0.5008183" side_tool="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.33387887" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Database Console" order="5" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="manage.py@GoDown_Management" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.31096563" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info active="true" anchor="right" id="Database" order="0" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="SciView" order="1" weight="0.32980332" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gd_vendor/views.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/gd_admin/admin_godown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_inventory/inventory_compose_mail.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_login_login" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/auth_user" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_admin_admin" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_vendor_vendorregister" />
+    <entry file="file://$PROJECT_DIR$/gd_admin/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_admin_vendor_register" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_admin_godown" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3d2b98dc-3290-40ae-b5ae-a66a9965a405/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/25c7be8a-d0aa-4c3c-ac61-c3be220a375c/console.sql" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_admin_employee" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_vendor_dispatcher" />
+    <entry file="das://25c7be8a-d0aa-4c3c-ac61-c3be220a375c/schema/main/table/gd_accountant_bill_generation" />
+    <entry file="das://456dca5f-6f45-41a4-8a2f-e536ec140c31/schema/main/table/gd_admin_godown" />
+    <entry file="das://456dca5f-6f45-41a4-8a2f-e536ec140c31/schema/main/table/gd_admin_admin" />
+    <entry file="das://456dca5f-6f45-41a4-8a2f-e536ec140c31/schema/main/table/gd_admin_employee" />
+    <entry file="das://456dca5f-6f45-41a4-8a2f-e536ec140c31/schema/main/table/gd_login_login" />
+    <entry file="file://$PROJECT_DIR$/templates/gd_admin/admin_employee.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_admin/view_pending_vendor.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_admin/update_godown.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_admin/admin_view_pending_vendor.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_inventory/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_accountant/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_admin/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_inventory/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_login/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_vendor/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_vendor/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_admin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="25" column="93" selection-start-line="25" selection-start-column="93" selection-end-line="25" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_accountant/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_accountant/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_login/static/images/gd1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_login/static/images/index.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/title.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_vendor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_vendor/vendor_register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/about_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/contact_us.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_inventory/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoDown_Management/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-624" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GoDown_Management/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gd_home/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aac78368-f606-417d-8f55-c07eff39fb08/schema/main/table/gd_admin_admin">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aac78368-f606-417d-8f55-c07eff39fb08/schema/main/table/gd_login_login">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aac78368-f606-417d-8f55-c07eff39fb08/schema/main/table/gd_vendor_dispatcher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aac78368-f606-417d-8f55-c07eff39fb08/schema/main/table/gd_login_inbox_mails">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gd_login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

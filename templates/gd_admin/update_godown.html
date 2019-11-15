@@ -1,0 +1,54 @@
+<html>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+
+
+{% for x in update_godown_data %}
+<form action="{% url 'confirm_update_godown' %}" method="post">
+{% csrf_token %}
+<table align="center">
+    <tr>
+        <th><font size="4" color="#dc143c">GoDown Id :</font></th>
+        <th><input type="number" value="{{ x.godown_id }}" readonly name="godown_id"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Location :</font></th>
+        <th><input type="text" value="{{ x.location }}" name="location"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Capacity :</font></th>
+        <th><input type="number" value="{{ x.capacity }}" name="capacity"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">GoDown Manager :</font></th>
+        <th><input type="text" value="{{ x.godown_manager }}" name="godown_manager"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Inventory Manager :</font></th>
+        <th><input type="text" value="{{ x.inventory_manager }}" name="inventory_manager"></th>
+    </tr>
+<tr>
+    <th colspan="2">
+         <form action="//">
+             <br>   <center><button type="submit" class="btn btn-info">Update</button></center>
+          </form>
+    </th>
+</tr>
+</table>
+
+</form>
+{% endfor %}
+</body>
+</head>
+</html>

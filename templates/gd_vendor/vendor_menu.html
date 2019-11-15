@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+
+
+<table align="center">
+    <tr>
+        <th width="130"></th>
+
+        <th></th>
+    <th>
+        <table align="center" border="0" width="800">
+    <tr>
+      <th>
+          <form action="{% url 'vendor_home' %}">
+              <button type="submit" class="btn btn-primary">Home</button>
+          </form>
+      </th>
+
+      <th>
+          <form action="{% url 'vendor_mail_menu' %}">
+              <button type="submit" class="btn btn-secondary">Email</button>
+          </form>
+      </th>
+      <th>
+          <form action="{% url 'vendor_request_for_menu' %}">
+              <button type="submit" class="btn btn-success">Request For</button>
+          </form>
+      </th>
+
+        <th>
+          <form action="{% url 'vendor_payments_menu' %}">
+              <button type="submit" class="btn btn-danger">Payments</button>
+          </form>
+      </th>
+        <th>
+          <form action="{% url 'vendor_view_profile' %}">
+              <button type="submit" class="btn btn-success">View Profile</button>
+          </form>
+      </th>
+         <th>
+          <form action="{% url 'vendor_reports_menu' %}">
+              <button type="submit" class="btn btn-secondary">Reports</button>
+          </form>
+      </th>
+
+      <th scope="col">
+          <form action="{% url 'vendor_logout' %}">
+          <button type="submit" class="btn btn-warning">LogOut</button>
+          </form>
+      </th>
+    </tr>
+</table>
+
+    </th>
+    </tr>
+</table>
+  </body>
+</html>

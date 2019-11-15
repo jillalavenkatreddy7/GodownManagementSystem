@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_accountant/accountant_menu.html' %}
+<br><br><br>
+<table align="center">
+    <tr>
+        <th width="80"></th>
+        <th>
+            <table align="center">
+    <tr>
+        <th>
+                <a href="{% url 'accountant_view_bills' %}">
+            <center><font size="5" face="Arial" color="#dc143c">View Bills</font></center>
+                </a>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <a href="{% url 'accountant_payments_reports' %}">
+              <center><font size="5" face="Arial" color="#dc143c">View Payments</font></center>
+            </a>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <a href="{% url 'accountant_pending_bills' %}">
+            <center><font size="5" face="Arial" color="#dc143c">Pending Bills</font></center>
+            </a>
+        </th>
+    </tr>
+</table>
+        </th>
+    </tr>
+</table>
+
+</body>
+</html>

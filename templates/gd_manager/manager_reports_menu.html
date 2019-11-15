@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports Menu</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_manager/godown_manager_menu.html' %}
+<br><br><br><br>
+<table align="center">
+    <tr><th><a href="{% url 'manager_vendor_reports' %}"><font size="5" color="#daa520">Vendor Reports</font> </a></th></tr>
+    <tr><th><a href="{% url 'manager_bill_reports' %}"><font size="5" color="#daa520">Bill Reports</font> </a></th></tr>
+    <tr><th><a href="{% url 'manager_pending_bills' %}"><font size="5" color="#daa520">Pending Bill Reports</font> </a></th></tr>
+    <tr><th><a href="{% url 'manager_payments_reports' %}"><font size="5" color="#daa520">Payments reports</font> </a></th></tr>
+    <tr><th><a href="{% url 'manager_product_reports' %}"><font size="5" color="#daa520">Product Reports</font> </a></th></tr>
+    <tr><th><a href="{% url 'manager_delivery_reports' %}"><font size="5" color="#daa520">Delivery reports</font> </a></th></tr>
+</table>
+</body>
+</html>

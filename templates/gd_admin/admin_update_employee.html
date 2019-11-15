@@ -1,0 +1,63 @@
+<html>
+<head>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+
+
+{% for x in employee_data %}
+    <form action="{% url 'admin_update_employee' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th><font size="4" color="#dc143c">Name :</font></th>
+        <th><input type="text" value="{{ x.name }}" name="name"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Designation :</font></th>
+        <th><input type="text" value="{{ x.designation }}" name="designation" readonly></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Address :</font></th>
+        <th><input type="text" value="{{ x.address }}" name="address"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Email_Id :</font></th>
+        <th><input type="text" value="{{ x.email }}" name="email"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Contact No :</font></th>
+        <th><input type="text" value="{{ x.contact }}" name="contact"></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Username :</font></th>
+        <th><input type="text" value="{{ x.username }}" name="username" readonly></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Password :</font></th>
+        <th><input type="text" value="{{ x.password }}" name="password"></th>
+    </tr>
+<tr>
+    <th colspan="2">
+
+             <br>   <center><button type="submit" class="btn btn-success">Update</button></center>
+
+    </th>
+</tr>
+</table>
+    </form>
+{% endfor %}
+</body>
+</head>
+</html>

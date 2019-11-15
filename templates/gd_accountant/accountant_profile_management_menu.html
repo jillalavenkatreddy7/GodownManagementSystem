@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_accountant/accountant_menu.html' %}
+
+<br><br><br><br>
+
+<table align="center">
+    <tr>
+        <th>
+            <a href="{% url 'accountant_view_profile' %}">
+            <font size="5" color="#ff4500">
+                <center>View Profile</center>
+            </font>
+            </a>
+        </th>
+    </tr>
+     <tr>
+        <th>
+             <a href="{% url 'accountant_change_password' %}">
+            <font size="5" color="#ff4500">
+                <center>Change Password</center>
+            </font>
+             </a>
+        </th>
+    </tr>
+</table>
+
+</body>
+</html>

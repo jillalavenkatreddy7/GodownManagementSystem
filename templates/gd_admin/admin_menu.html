@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+
+
+<table align="center">
+    <tr>
+        <th width="130"></th>
+
+        <th></th>
+    <th>
+        <table align="center" border="0" width="800">
+    <tr>
+      <th>
+          <form action="{% url 'admin_home' %}">
+              <button type="submit" class="btn btn-primary">Home</button>
+          </form>
+      </th>
+
+      <th>
+          <form action="{% url 'admin_mail_menu' %}">
+              <button type="submit" class="btn btn-secondary">Email</button>
+          </form>
+      </th>
+      <th>
+          <form action="{% url 'admin_godown' %}">
+              <button type="submit" class="btn btn-success">GoDown</button>
+          </form>
+      </th>
+        <th>
+          <form action="{% url 'admin_employee' %}">
+              <button type="submit" class="btn btn-warning">Employee</button>
+          </form>
+      </th>
+        <th>
+          <form action="{% url 'admin_pending_vendors' %}">
+              <button type="submit" class="btn btn-danger">Vendor</button>
+          </form>
+      </th>
+        <th>
+          <form action="{% url 'admin_profile_menu' %}">
+              <button type="submit" class="btn btn-secondary">Profile Management</button>
+          </form>
+      </th>
+        <th>
+          <form action="{% url 'admin_reports_menu' %}">
+              <button type="submit" class="btn btn-success">Reports</button>
+          </form>
+      </th>
+      <th scope="col">
+          <form action="{% url 'admin_logout' %}">
+          <button type="submit" class="btn btn-warning">LogOut</button>
+          </form>
+      </th>
+    </tr>
+</table>
+
+    </th>
+    </tr>
+</table>
+  </body>
+</html>

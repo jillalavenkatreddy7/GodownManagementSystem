@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Request for Space</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_vendor/vendor_menu.html' %}
+<br><br><br><br>
+<form action="{% url 'save_dispatcher' %}" method="post">
+{% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font color="#8b008b" face="Arial" size="5">Request For Dispatcher</font> </center><br>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Vendor_Id :</font></th>
+        <th>
+            <select name="vendor_id">
+            {% for x in vendor_id %}
+                <option>{{ x.vendor_id }}</option>
+            {% endfor %}
+            </select>
+    </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Product Name :</font></th>
+        <th><input type="text" name="product_name" required></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Product Capacity :</font></th>
+        <th><input type="number" name="product_capacity" required><span>In Quintals</span></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Address to Delivery :</font></th>
+        <th>
+            <textarea name="address"></textarea>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Name of the Customer :</font></th>
+        <th><input type="text" name="customer_name" required></th>
+    </tr>
+    <tr>
+        <th colspan="2"><br>
+            <center><button type="submit" class="btn btn-success">Submit</button></center>
+        </th>
+    </tr>
+</table>
+</form>
+
+<br>
+    <center><font size="5" color="yellow" face="Arial">{{ message }}</font> </center>
+
+</body>
+</html>

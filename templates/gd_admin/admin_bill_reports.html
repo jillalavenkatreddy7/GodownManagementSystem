@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Reports</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br><br>
+{% if object_list %}
+<table align="center" border="2">
+    <tr bgcolor="#d2691e">
+        <th width="150">Vendor_Name</th>
+        <th width="150">Product_Name</th>
+        <th width="200">Generation date</th>
+        <th width="100">Amount</th>
+    </tr>
+{% for x in object_list %}
+    <tr bgcolor="#ffd700">
+        <th width="100">{{ x.vendor_name }}</th>
+        <th width="100">{{ x.product_name }}</th>
+        <th width="100">{{ x.bill_gen_date }}</th>
+        <th width="100">{{ x.amount }}</th>
+    </tr>
+{% endfor %}
+</table>
+{% else %}
+    <center><font size="5" face="Arial Black" color="red">Sorry.. No Bills are Generated</font></center>
+{% endif %}
+<br><br>
+
+ <form action="{% url 'admin_reports_menu' %}">
+     <center><button type="submit" class="btn btn-secondary">Back</button></center>
+          </form>
+
+</body>
+</html>

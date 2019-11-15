@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Compose Mail</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_manager/godown_manager_menu.html' %}
+<br><br><br><br>
+<form action="{% url 'send_mail' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr><th colspan="2"><center><font size="5" face="Arial Black" color="#1e90ff">Compose Mail</font> </center></th></tr>
+    <tr><th></th></tr>
+    <tr><th></th></tr>
+    <tr><th></th></tr>
+   <tr><th><input type="hidden" value="{{ request.session.username }}" name="frm"></th></tr>
+    <tr><th><input type="hidden" value="GoDown Manager" name="type"></th></tr>
+    <tr>
+        <th><font size="5" color="#ff4500" face="Arial">To : </font></th>
+        <th><input type="text" required name="to"></th>
+    </tr>
+    <tr>
+        <th><font size="5" color="#ff4500" face="Arial">Subject : </font></th>
+        <th><input type="text" required name="subject"></th>
+    </tr>
+    <tr>
+        <th><font size="5" color="#ff4500" face="Arial">Body : </font></th>
+        <th><textarea name="body" required></textarea> </th>
+    </tr>
+    <tr>
+        <th colspan="2">
+             <br>
+                 <center><button type="submit" class="btn btn-success">Send</button></center>
+        </th>
+    </tr>
+</table>
+    <br>
+    {% for message in messages %}
+    <center><font size="5" color="#dc143c" face="Arial">{{ message }}</font> </center>
+{% endfor %}
+</form>
+</body>
+</html>

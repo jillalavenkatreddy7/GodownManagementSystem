@@ -1,0 +1,56 @@
+<html>
+<head>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_admin/admin_menu.html' %}
+<br><br>
+
+
+{% for x in vendor_data %}
+<table align="center">
+    <tr>
+        <th>Vendor Id :</th>
+        <th>{{ x.vendor_id }}</th>
+    </tr>
+    <tr>
+        <th>Vendor Name :</th>
+        <th>{{ x.vendor_name }}</th>
+    </tr>
+    <tr>
+        <th>Comapany Name :</th>
+        <th>{{ x.company_name }}</th>
+    </tr>
+    <tr>
+        <th>Company address :</th>
+        <th>{{ x.company_address }}</th>
+    </tr>
+    <tr>
+        <th>Contact No :</th>
+        <th>{{ x.contact_no }}</th>
+    </tr>
+    <tr>
+        <th>Email-Id :</th>
+        <th>{{ x.email_id }}</th>
+    </tr>
+<tr>
+    <th colspan="2">
+         <form action="{% url 'admin_pending_vendors' %}">
+             <br>   <center><button type="submit" class="btn btn-info">Back</button></center>
+          </form>
+    </th>
+</tr>
+</table>
+{% endfor %}
+</body>
+</head>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Generation</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_accountant/accountant_menu.html' %}
+<br><br><br>
+<form action="{% url 'accountant_generate_bill' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="6" face="Arial Black" color="#8b008b">Bill generation</font></center><br>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Vendor Name :</font></th>
+        <th>
+            <select name="vendor_name">
+                {% for x in vendor_data %}
+                    <option>{{ x.vendor_name }}</option>
+                {% endfor %}
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Product Name :</font></th>
+        <th><input type="text" name="product_name" required></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Bill Generation Date :</font></th>
+        <th><input type="date" name="bill_gen_date" required></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Amount :</font></th>
+        <th><input type="number" name="amount" required></th>
+    </tr>
+    <th colspan="2">
+          <form action=""><br>
+              <center><button type="submit" class="btn btn-danger">Generate</button></center>
+          </form>
+      </th>
+</table>
+</form>
+
+</body>
+</html>

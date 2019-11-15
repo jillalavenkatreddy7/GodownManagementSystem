@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account_View_Bills</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+{% include 'gd_home/title.html' %}
+{% include 'gd_accountant/accountant_menu.html' %}
+<br><br>
+<br><br>
+{% if object_list %}
+<table align="center" border="2">
+    <tr bgcolor="#ff4500">
+        <center><th width="200">Vendor Name</th></center>
+        <center><th width="200">Product Name</th></center>
+        <center><th width="100">Amount</th></center>
+             <center><th width="200">Bill Date</th></center>
+    </tr>
+{% for x in object_list %}
+    <tr bgcolor="#1e90ff">
+        <th width="100">{{ x.vendor_name }}</th>
+        <th width="100">{{ x.product_name }}</th>
+        <th width="100">{{ x.amount }}</th>
+        <th width="100">{{ x.bill_gen_date }}</th>
+    </tr>
+{% endfor %}
+
+</table>
+{% else %}
+<center><font size="5" color="#dc143c" face="Arial">No Bills are Generated</font></center>
+{% endif %}
+<br><br>
+
+ <form action="{% url 'accountant_reports_menu' %}">
+     <center><button type="submit" class="btn btn-secondary">Back</button></center>
+          </form>
+
+
+</body>
+</html>

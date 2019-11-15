@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Payments</title>
+{% load staticfiles %}
+</head>
+<body  background="{% static 'images/gd1.jpg' %}">
+<style>
+        body{
+            text-align: center;
+            background-size: cover;
+            background-repeat:no-repeat;
+        }
+    </style>
+
+{% include 'gd_home/title.html' %}
+{% include 'gd_vendor/vendor_menu.html' %}
+<br><br><br>
+<form action="{% url 'make_payments' %}" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <th colspan="2">
+            <center><font size="5" face="Arial" color="#8b008b">Make Payments</font></center><br>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Vendor Name :</font></th>
+        <th><input type="text" name="vendor_name" value="{{ request.session.username }}" required></th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Bill Id :</font></th>
+        <th>
+            <select name="bill_id">
+                {% for x in object_list %}
+                    <option>{{ x.bill_id }}</option>
+                {% endfor %}
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Amount :</font></th>
+        <th><input type="number" name="amount" required></th>
+    </tr>
+    <tr>
+        <th>Payment Type :</th>
+        <th>
+            <select name="paymeny_type">
+                <option>--Select--</option>
+                <option>Check No.</option>
+                <option>DD No.</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th><font size="4" color="#dc143c">Cheque/DD No. :</font></th>
+        <th><input type="number" name="number" required></th>
+    </tr>
+    <tr>
+    <th colspan="2">
+          <form action=""><br>
+              <center><button type="submit" class="btn btn-success">MakePay</button></center>
+          </form>
+      </th>
+    </tr>
+</table>
+</form>
+<br><br>
+<center><font size="5" color="#1e90ff" face="Arial">{{ message }}</font> </center>
+</body>
+</html>
+</html>
